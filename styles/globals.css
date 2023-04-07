@@ -1,24 +1,26 @@
 :root {
   /* color */
-  --green: #19B444;
-  --green_light: #DCFFE6;
-  --blue: #3399FF;
-  --blue_light: #DFEFFF;
+  --green: #19b444;
+  --green_light: #dcffe6;
+  --blue: #3399ff;
+  --blue_light: #dfefff;
   --bg_dark: #091928;
-  --bg_light: #FFFFFF;
-  --white: #FFFFFF;
+  --bg_light: #ffffff;
+  --white: #ffffff;
   --black: #000000;
 
-  --gray_200: #EAEAEA;
-  --gray_400: #D7D7D7;
-  --gray_600: #ABABAB;
+  --gray_200: #eaeaea;
+  --gray_400: #d7d7d7;
+  --gray_600: #ababab;
   --gray_800: #686868;
   --gray_1000: #424242;
 
-  --hover: #D7D7D7;
+  --hover_light: #fafafa;
+  --hover_medium: #424242;
+  --hover_dark: #212121;
   --selected: #424242;
 
   /* shape */
-  --border-radius: 6px
-  --border-radius-pill: 30px
+  --border-radius: 6px;
+  --border-radius-pill: 30px;
 }
