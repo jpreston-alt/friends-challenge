@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, ClerkieIcon, NavMenu } from "@components";
+import { Text, NavMenu } from "@components";
+import { ClerkieIcon } from "@icons";
 import stylesGlobal from "@styles/globals.module.css";
 import styles from "./SideNav.module.css";
 

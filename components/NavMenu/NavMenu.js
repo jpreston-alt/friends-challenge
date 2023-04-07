@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NavMenu.module.css";
-import { HomeIcon, FriendsIcon, NavItem } from "@components";
+import { NavItem } from "@components";
+import { HomeIcon, FriendsIcon } from "@icons";
 
 const links = [
   {
