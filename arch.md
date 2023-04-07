@@ -36,6 +36,7 @@
     - text
 - Badge/Chip
 - Loader
+- Link
 
 ## Molecules
 

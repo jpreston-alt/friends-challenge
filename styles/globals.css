@@ -23,4 +23,12 @@
   /* shape */
   --border-radius: 6px;
   --border-radius-pill: 30px;
+
+  /* shadow */
+  --box-shadow: 0px 4px 4px rgba(162, 162, 162, 0.1);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
 }

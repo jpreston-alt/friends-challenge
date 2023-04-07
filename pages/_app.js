@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
+import { PageTemplate } from "@components";
 import "@styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -10,9 +8,9 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <title>{pageProps.title}</title>
       </Head>
-      <main className={inter.className}>
+      <PageTemplate pageName={pageProps.title}>
         <Component {...pageProps} />
-      </main>
+      </PageTemplate>
     </>
   );
 };
