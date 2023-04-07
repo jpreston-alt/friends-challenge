@@ -13,12 +13,16 @@ const tagMap = {
   chip: "span",
 };
 
-const Text = ({ variant, color, children }) => {
+const Text = ({ variant, color, children, className }) => {
   const Tag = tagMap[variant];
   const variantClass = styles[variant];
   const colorClass = styles[`color-${color}`];
 
-  return <Tag className={`${variantClass} ${colorClass}`}>{children}</Tag>;
+  return (
+    <Tag className={`${variantClass} ${colorClass} ${className}`}>
+      {children}
+    </Tag>
+  );
 };
 
 Text.propTypes = {
@@ -41,11 +45,13 @@ Text.propTypes = {
     "green",
   ]),
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 Text.defaultProps = {
   variant: "body",
   color: "primary",
+  className: "",
 };
 
 export default Text;

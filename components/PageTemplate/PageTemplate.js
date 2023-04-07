@@ -11,7 +11,7 @@ const PageTemplate = ({ children, pageName }) => {
     <div className={inter.className}>
       <div className={styles.container}>
         <div className={styles.side_nav_container}>
-          <SideNav />
+          <SideNav pageName={pageName} />
         </div>
         <div className={styles.page_container}>
           <NavBar pageName={pageName} />
