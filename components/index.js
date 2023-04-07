@@ -4,3 +4,5 @@ export { default as FilterIcon } from "./FilterIcon/FilterIcon";
 export { default as PageTemplate } from "./PageTemplate/PageTemplate";
 export { default as NavBar } from "./NavBar/NavBar";
 export { default as SideNav } from "./SideNav/SideNav";
+export { default as ClerkieIcon } from "./ClerkieIcon/ClerkieIcon";
+export { default as Container } from "./Container/Container";
