@@ -1,0 +1,20 @@
+.container {
+  margin-bottom: 5px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  padding-left: 10px;
+}
+
+.link:hover span {
+  font-weight: 800;
+}
+
+.active {
+  background-color: var(--gray_1000);
+}

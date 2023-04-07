@@ -5,6 +5,7 @@ export { default as PageTemplate } from "./PageTemplate/PageTemplate";
 export { default as NavBar } from "./NavBar/NavBar";
 export { default as SideNav } from "./SideNav/SideNav";
 export { default as ClerkieIcon } from "./ClerkieIcon/ClerkieIcon";
-export { default as Link } from "./Link/Link";
+export { default as NavItem } from "./NavItem/NavItem";
 export { default as HomeIcon } from "./HomeIcon/HomeIcon";
 export { default as FriendsIcon } from "./FriendsIcon/FriendsIcon";
+export { default as NavMenu } from "./NavMenu/NavMenu";

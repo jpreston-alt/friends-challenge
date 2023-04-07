@@ -8,15 +8,13 @@ const inter = Inter({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
 const PageTemplate = ({ children, pageName }) => {
   return (
-    <div className={inter.className}>
-      <div className={styles.container}>
-        <div className={styles.side_nav_container}>
-          <SideNav pageName={pageName} />
-        </div>
-        <div className={styles.page_container}>
-          <NavBar pageName={pageName} />
-          <main>{children}</main>
-        </div>
+    <div className={`${inter.className} ${styles.container}`}>
+      <div className={styles.side_nav_container}>
+        <SideNav />
+      </div>
+      <div className={styles.page_container}>
+        <NavBar pageName={pageName} />
+        <main>{children}</main>
       </div>
     </div>
   );

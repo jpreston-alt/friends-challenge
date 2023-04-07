@@ -11,6 +11,7 @@ const tagMap = {
   body: "p",
   label: "label",
   chip: "span",
+  link: "span",
 };
 
 const Text = ({ variant, color, children, className }) => {
@@ -35,6 +36,7 @@ Text.propTypes = {
     "body",
     "label",
     "chip",
+    "link",
   ]),
   color: PropTypes.oneOf([
     "primary",
