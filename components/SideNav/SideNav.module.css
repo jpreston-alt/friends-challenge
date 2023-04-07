@@ -1,4 +1,12 @@
 .container {
   background-color: var(--bg_dark);
   height: 100vh;
+  padding: 32px 15px;
+}
+
+.title_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
 }
