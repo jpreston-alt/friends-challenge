@@ -18,6 +18,11 @@
   font-weight: 700;
 }
 
+.h5 {
+  font-size: 14px;
+  weight: 500;
+}
+
 .body {
   font-size: 14px;
   font-weight: 500;
