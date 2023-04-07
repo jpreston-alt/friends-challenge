@@ -3,16 +3,12 @@ import PropTypes from "prop-types";
 import { Text } from "@components";
 import styles from "./NavBar.module.css";
 
-const NavBar = ({ pageName }) => {
-  return (
-    <div className={styles.container}>
-      <Text variant="h2">{pageName}</Text>
-    </div>
-  );
-};
+const NavBar = ({ pageName }) => (
+  <div className={styles.container}>
+    <Text variant="h2">{pageName}</Text>
+  </div>
+);
 
-NavBar.propTypes = {};
-
-NavBar.defaultProps = {};
+NavBar.propTypes = { pageName: PropTypes.string.isRequired };
 
 export default NavBar;

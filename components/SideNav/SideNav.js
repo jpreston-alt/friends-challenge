@@ -1,24 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./SideNav.module.css"
+import styles from "./SideNav.module.css";
 
 const SideNav = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div className={styles.container}></div>;
 };
 
-SideNav.propTypes = {
+SideNav.propTypes = {};
 
-};
-
-SideNav.defaultProps = {
-    
-};
+SideNav.defaultProps = {};
 
 export default SideNav;
-
-
-

@@ -9,15 +9,22 @@ const inter = Inter({ subsets: ["latin"], weight: ["500", "600", "700"] });
 const PageTemplate = ({ children, pageName }) => {
   return (
     <div className={inter.className}>
-      <NavBar pageName={pageName} />
-      <SideNav />
-      <main>{children}</main>
+      <div className={styles.container}>
+        <div className={styles.side_nav_container}>
+          <SideNav />
+        </div>
+        <div className={styles.page_container}>
+          <NavBar pageName={pageName} />
+          <main>{children}</main>
+        </div>
+      </div>
     </div>
   );
 };
 
-PageTemplate.propTypes = {};
-
-PageTemplate.defaultProps = {};
+PageTemplate.propTypes = {
+  children: PropTypes.node.isRequired,
+  pageName: PropTypes.string.isRequired,
+};
 
 export default PageTemplate;
