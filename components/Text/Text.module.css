@@ -1,0 +1,58 @@
+.h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.body {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chip {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.color-primary {
+  color: var(--black);
+}
+
+.color-secondary {
+  color: var(--gray_600);
+}
+
+.color-disabled {
+  color: var(--gray_400);
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.color-green {
+  color: var(--green);
+}
+
+.color-blue {
+  color: var(--blue);
+}

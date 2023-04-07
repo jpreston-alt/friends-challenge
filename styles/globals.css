@@ -6,17 +6,14 @@
   --blue_light: #DFEFFF;
   --bg_dark: #091928;
   --bg_light: #FFFFFF;
+  --white: #FFFFFF;
+  --black: #000000;
 
-  --gray_200: #EAEAEA
-  --gray_400: #D7D7D7
-  --gray_600: #ABABAB
-  --gray_800: #686868
-  --gray_1000: #424242
-
-  --primary_text: #000000;
-  --secondary_text: #ABABAB;
-  --disabled_text: #D7D7D7;
-  --white_text: #FFFFFF;
+  --gray_200: #EAEAEA;
+  --gray_400: #D7D7D7;
+  --gray_600: #ABABAB;
+  --gray_800: #686868;
+  --gray_1000: #424242;
 
   --hover: #D7D7D7;
   --selected: #424242;
