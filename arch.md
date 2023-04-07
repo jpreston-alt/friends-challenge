@@ -18,9 +18,11 @@
   - variants:
     - h1 - "Welcome to the Clerkie Challenge!"
     - h2 - "Home"/"Friends" (Page Names)
-    - h3 - "Clerkie Challenge", NavItems, Friend Name, "Filter"
+    - h3 - "Clerkie Challenge", "Filter"
+    - h4 - Friend Name
+    - h5 - "Friend Status"
     - body - friend email, friend phone number
-    - subtitle - badge/chip, "Friend Status"
+    - chip - badge/chip
     - label - checkbox labels
   - colors:
     - primary - "Home"
@@ -63,21 +65,44 @@
 
 ## Colors
 
-- primary (#000000)
-- secondary (#ABABAB)
-- white (#FFFFFF)
+- primary_text #000000
+- secondary_text #ABABAB
+- disabled_text #D7D7D7
+- white_text #FFFFFF
+- green #19B444
+- green_light #DCFFE6
+- blue #3399FF
+- blue_light #DFEFFF
+- bg_dark #091928
+- bg_light #FFFFFF
+- selected #424242
+- gray_200 #EAEAEA
+- gray_400 #D7D7D7
+- gray_600 #ABABAB
+- gray_800 #686868
+- gray_1000 #424242
 
 ## Typography
 
-- h1 { font-size: 28px, weight: 600 }
-- h2
-- h3
-- body
-- subtitle
-- label
+{ font-family: Inter }
 
-## State
+- h1 { font-size: 26px, weight: 600 }
+- h2 { font-size: 18px, weight: 700 }
+- h3 { font-size: 16px, weight: 600 }
+- h4 { font-size: 16px, weight: 700 }
+- h5 { font-size: 14px, weight: 500 }
+- body { font-size: 14px, weight: 500 }
+- label { font-size: 16px, weight: 600 }
+- chip { font-size: 12px, weight: 600 }
+
+## Shape
+
+- border-radius: 6px
+- border-radius-pill: 30px
+
+# State
 
 /friends
 
 - filter state: managed by page component
+- friends state: managed by page component
