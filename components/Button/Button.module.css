@@ -22,7 +22,7 @@
   composes: button;
   border-radius: var(--border-radius-pill);
   height: 37px;
-  padding: 0px 19px;
+  padding: 0 var(--spacing_4);
   border: 1px solid var(--gray_600);
   background-color: var(--white);
 }
@@ -37,7 +37,7 @@
   font-size: 14px;
   color: var(--blue);
   height: 37px;
-  padding: 0px 19px;
+  padding: 0 var(--spacing_4);
 }
 
 .text:hover {

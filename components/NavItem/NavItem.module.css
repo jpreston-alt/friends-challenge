@@ -1,14 +1,14 @@
 .container {
-  margin-bottom: 5px;
+  margin-bottom: var(--spacing_1);
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: var(--spacing_2);
   height: 40px;
   border-radius: var(--border-radius);
-  padding-left: 10px;
+  padding-left: var(--spacing_2);
 }
 
 .link:hover span {
