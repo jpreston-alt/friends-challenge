@@ -1,0 +1,51 @@
+export const friendsData = [
+  {
+    id: "f0e2a205-5fd1-46ab-b475-1565873dff51",
+    name: "Sally Cooper",
+    email: "sallycooper@gmail.com",
+    phone: "(470) 782-5471",
+    friendLevel: 1,
+  },
+  {
+    id: "396144ae-a160-4fbf-b1f2-174245451a01",
+    name: "Judith Gonzalez",
+    email: "jgonzalez@gmail.com",
+    phone: "(123) 142-4123",
+    friendLevel: 0,
+  },
+  {
+    id: "2d99ecf8-dbe5-4b0e-bcfa-771176b48dd2",
+    name: "George Bryant",
+    email: "georgebryant@gmail.com",
+    phone: "(393) 292-0983",
+    friendLevel: 0,
+  },
+  {
+    id: "67d26768-0d72-40c5-880f-6a4fa148f59a",
+    name: "Betty Wood",
+    email: "betty@gmail.com",
+    phone: "(273) 098-1029",
+    friendLevel: 2,
+  },
+  {
+    id: "c6d27764-44cc-48d9-a6d5-f338a83e6c37",
+    name: "Debra Russell",
+    email: "debraressell@gmail.com",
+    phone: "(412) 235-5321",
+    friendLevel: 2,
+  },
+  {
+    id: "439a62c9-e2f7-4f2b-a98d-416c2e5781f1",
+    name: "Rebecca Flores",
+    email: "rebeccaflores@gmail.com",
+    phone: "(574) 243-2574",
+    friendLevel: 1,
+  },
+  {
+    id: "b1333457-2062-41d4-baab-571dae4b4ca3",
+    name: "Kim Holland",
+    email: "kimholland@gmail.com",
+    phone: "(357) 345-6324",
+    friendLevel: 1,
+  },
+];

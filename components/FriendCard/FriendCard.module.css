@@ -1,0 +1,15 @@
+.container {
+  border: 1px solid var(--gray_400);
+  border-radius: var(--border-radius);
+  padding: var(--spacing_6);
+  margin-bottom: var(--spacing_3);
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: var(--spacing_3);
+}
+
+.subtitle {
+  margin: 0;
+}
