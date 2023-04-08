@@ -6,3 +6,4 @@ export { default as SideNav } from "./SideNav/SideNav";
 export { default as NavItem } from "./NavItem/NavItem";
 export { default as NavMenu } from "./NavMenu/NavMenu";
 export { default as FriendCard } from "./FriendCard/FriendCard";
+export { default as Chip } from "./Chip/Chip";

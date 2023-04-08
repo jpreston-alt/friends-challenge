@@ -1,0 +1,16 @@
+.container {
+  padding: var(--spacing_1) var(--spacing_2);
+  border-radius: var(--border-radius-pill);
+}
+
+.blue {
+  composes: container;
+  color: var(--blue);
+  background: var(--blue_light);
+}
+
+.green {
+  composes: container;
+  color: var(--green);
+  background: var(--green_light);
+}

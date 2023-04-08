@@ -8,7 +8,7 @@ const tagMap = {
   h3: "h3",
   h4: "h4",
   h5: "h5",
-  body: "p",
+  body: "span",
   label: "label",
   chip: "span",
   link: "span",

@@ -5,11 +5,13 @@
   margin-bottom: var(--spacing_3);
 }
 
-.title {
-  margin-top: 0;
+.title_container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing_2);
   margin-bottom: var(--spacing_3);
 }
 
-.subtitle {
+.title {
   margin: 0;
 }
