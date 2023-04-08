@@ -1,5 +1,12 @@
+import { Text } from "@components";
+import stylesGlobal from "@styles/globals.module.css";
+
 const Home = () => {
-  return <></>;
+  return (
+    <div className={stylesGlobal.center}>
+      <Text variant="h1">Welcome to the Clerkie Challenge!</Text>
+    </div>
+  );
 };
 
 export default Home;
