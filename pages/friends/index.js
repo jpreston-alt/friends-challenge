@@ -1,12 +1,22 @@
-import { FriendCard } from "@components";
+import { useState, useEffect } from "react";
+import { FriendCard, FilterFormContainer } from "@components";
 import styles from "./friends.module.css";
 
+// TODO replace with /api/friends
 import { friendsData } from "@mocks/friends-data";
 
 const Friends = () => {
+  const [filters, setFilters] = useState(null);
+  const [friends, setFriends] = useState(friendsData);
+
+  const addFilters = (val) => {
+    console.log(val);
+  };
+
   return (
     <div className={styles.container}>
-      {friendsData.map((friend) => (
+      <FilterFormContainer addFilters={addFilters} />
+      {friends.map((friend) => (
         <FriendCard key={friend.id} {...friend} />
       ))}
     </div>

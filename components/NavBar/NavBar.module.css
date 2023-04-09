@@ -2,7 +2,7 @@
   height: 80px;
   display: flex;
   align-items: center;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow_1);
   bacground: var(--bg_light);
   padding: 0 var(--spacing_8);
 }

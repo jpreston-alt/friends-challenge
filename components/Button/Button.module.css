@@ -37,9 +37,14 @@
   font-size: 14px;
   color: var(--blue);
   height: 37px;
-  padding: 0 var(--spacing_4);
 }
 
 .text:hover {
   background: var(--hover_light);
+}
+
+.button:disabled {
+  color: var(--gray_400);
+  background: none;
+  cursor: not-allowed;
 }

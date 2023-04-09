@@ -1,0 +1,35 @@
+.container {
+  box-shadow: var(--box-shadow_2);
+  border-radius: var(--border-radius);
+  width: 320px;
+  position: absolute;
+  background: var(--bg_light);
+}
+
+.title_container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray_200);
+  padding: var(--spacing_3) var(--spacing_4);
+}
+
+.title {
+  margin: 0;
+}
+
+.form_title {
+  margin: 0;
+  padding: var(--spacing_4);
+  padding-bottom: 0;
+}
+
+.form_container {
+  padding: var(--spacing_4);
+  padding-top: 0;
+}
+
+.submit_btn {
+  margin-top: var(--spacing_7);
+}

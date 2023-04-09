@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing_5);
+}
+
+.checkbox {
+  height: 19px;
+  width: 19px;
+  border: 1.5px solid var(--gray_600);
+  accent-color: var(--blue);
+  color: salmon;
+}
+
+.label {
+  color: var(--gray_1000);
+}

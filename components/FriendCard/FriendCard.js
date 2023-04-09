@@ -1,18 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, Chip } from "@components";
+import { friendLevels } from "@mocks/friend-levels";
 import styles from "./FriendCard.module.css";
-
-const friendLevels = {
-  1: {
-    text: "Close Friends",
-    color: "blue",
-  },
-  2: {
-    text: "Super Close Friends",
-    color: "green",
-  },
-};
 
 const FriendCard = ({ name, email, phone, friendLevel }) => {
   return (

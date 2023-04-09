@@ -1,0 +1,17 @@
+.container {
+  margin-bottom: var(--spacing_5);
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing_2);
+}
+
+.separator {
+  border: 0;
+  border-left: 1px solid var(--gray_400);
+  height: 30px;
+  display: inline-block;
+  margin: 0 var(--spacing_3);
+}

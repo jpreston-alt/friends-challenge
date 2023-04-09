@@ -7,3 +7,6 @@ export { default as NavItem } from "./NavItem/NavItem";
 export { default as NavMenu } from "./NavMenu/NavMenu";
 export { default as FriendCard } from "./FriendCard/FriendCard";
 export { default as Chip } from "./Chip/Chip";
+export { default as FilterForm } from "./FilterForm/FilterForm";
+export { default as FilterFormContainer } from "./FilterFormContainer/FilterFormContainer";
+export { default as Checkbox } from "./Checkbox/Checkbox";
