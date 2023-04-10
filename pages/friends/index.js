@@ -6,17 +6,24 @@ import styles from "./friends.module.css";
 import { friendsData } from "@mocks/friends-data";
 
 const Friends = () => {
-  const [filters, setFilters] = useState(null);
+  const [filters, setFilters] = useState([]);
   const [friends, setFriends] = useState(friendsData);
+  const addFilters = (_filters) => setFilters(_filters);
+  const clearFilters = () => setFilters([]);
+  const disableClear = filters.length === 0;
 
-  const addFilters = (val) => {
-    console.log(val);
-  };
+  let friendsToDisplay = [...friends];
+  if (filters.length > 0)
+    friendsToDisplay = friends.filter((f) => filters.includes(f.friendLevel));
 
   return (
     <div className={styles.container}>
-      <FilterFormContainer addFilters={addFilters} />
-      {friends.map((friend) => (
+      <FilterFormContainer
+        addFilters={addFilters}
+        clearFilters={clearFilters}
+        disableClear={disableClear}
+      />
+      {friendsToDisplay.map((friend) => (
         <FriendCard key={friend.id} {...friend} />
       ))}
     </div>

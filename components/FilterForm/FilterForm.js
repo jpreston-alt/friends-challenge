@@ -5,7 +5,12 @@ import { CloseIcon } from "@icons";
 import { friendLevelsArr } from "@mocks/friend-levels";
 import styles from "./FilterForm.module.css";
 
-const FilterForm = ({ toggleShowForm, addFilters }) => {
+const FilterForm = ({
+  toggleShowForm,
+  addFilters,
+  clearFilters,
+  disableClear,
+}) => {
   const checkboxRefs = {
     1: useRef(),
     2: useRef(),
@@ -16,6 +21,7 @@ const FilterForm = ({ toggleShowForm, addFilters }) => {
     const checkedLevels = friendLevelsArr.filter(
       (f) => checkboxRefs[f.level].current.checked === true
     );
+
     const filters = checkedLevels.map((l) => l.level);
     addFilters(filters);
     toggleShowForm();
@@ -24,7 +30,9 @@ const FilterForm = ({ toggleShowForm, addFilters }) => {
   return (
     <div className={styles.container} data-popover="up">
       <div className={styles.title_container}>
-        <Button variant="text">Clear All</Button>
+        <Button variant="text" onClick={clearFilters} disabled={disableClear}>
+          Clear All
+        </Button>
         <Text variant="h3" className={styles.title}>
           Filter
         </Text>
@@ -57,6 +65,8 @@ const FilterForm = ({ toggleShowForm, addFilters }) => {
 FilterForm.propTypes = {
   toggleShowForm: PropTypes.func.isRequired,
   addFilters: PropTypes.func.isRequired,
+  clearFilters: PropTypes.func.isRequired,
+  disableClear: PropTypes.bool.isRequired,
 };
 
 export default FilterForm;
