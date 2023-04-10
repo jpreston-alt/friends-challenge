@@ -1,0 +1,8 @@
+.container {
+  border-radius: var(--border-radius-pill);
+  background: linear-gradient(
+    90deg,
+    #eaeaea 26.47%,
+    rgba(234, 234, 234, 0.25) 100%
+  );
+}

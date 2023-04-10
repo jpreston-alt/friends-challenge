@@ -11,3 +11,4 @@ export { default as FilterForm } from "./FilterForm/FilterForm";
 export { default as FilterFormContainer } from "./FilterFormContainer/FilterFormContainer";
 export { default as Checkbox } from "./Checkbox/Checkbox";
 export { default as Card } from "./Card/Card";
+export { default as Loader } from "./Loader/Loader";
