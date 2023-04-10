@@ -1,28 +1,17 @@
-import { useState, useEffect } from "react";
 import { FilterFormContainer, FriendsList, LoaderCard } from "@components";
+import { useFriends } from "@hooks";
 import styles from "./friends.module.css";
 
 const Friends = () => {
-  const [filters, setFilters] = useState([]);
-  const [friends, setFriends] = useState([]);
-
-  useEffect(() => {
-    const getFriends = async () => {
-      const res = await fetch("/api/friends");
-      const resJson = await res.json();
-      setFriends((friends) => [...friends, ...resJson]);
-    };
-
-    getFriends();
-  }, []);
-
-  const addFilters = (_filters) => setFilters(_filters);
-  const clearFilters = () => setFilters([]);
-  const disableClear = filters.length === 0;
-
-  let friendsFiltered = [...friends];
-  if (filters.length > 0)
-    friendsFiltered = friends.filter((f) => filters.includes(f.friendLevel));
+  const {
+    filters,
+    addFilters,
+    clearFilters,
+    disableClear,
+    friends,
+    pageSize,
+    lastItemRef,
+  } = useFriends();
 
   return (
     <div className={styles.container}>
@@ -32,8 +21,14 @@ const Friends = () => {
         disableClear={disableClear}
         filters={filters}
       />
-      <FriendsList friends={friendsFiltered} />
-      <LoaderCard />
+      <FriendsList friends={friends} pageSize={pageSize} />
+      {filters.length === 0 ? (
+        <div ref={lastItemRef}>
+          <LoaderCard />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

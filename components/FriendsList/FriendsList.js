@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { LoaderCard, FriendCard } from "@components";
 
-const FriendsList = ({ friends }) => {
+const FriendsList = ({ friends, pageSize }) => {
   if (friends.length === 0)
-    return Array.from(Array(10).keys()).map((el) => (
+    return Array.from(Array(pageSize).keys()).map((el) => (
       <LoaderCard key={`loader-card-${el}`} />
     ));
 
@@ -15,7 +15,7 @@ const FriendsList = ({ friends }) => {
 
 FriendsList.propTypes = {
   friends: PropTypes.arrayOf(
-    PropTypes.objectOf({
+    PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
       email: PropTypes.string,
@@ -23,6 +23,7 @@ FriendsList.propTypes = {
       friendLevel: PropTypes.number,
     })
   ).isRequired,
+  pageSize: PropTypes.number.isRequired,
 };
 
 export default FriendsList;
