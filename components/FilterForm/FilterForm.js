@@ -1,28 +1,24 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import { Button, Text, Checkbox } from "@components";
 import { CloseIcon } from "@icons";
 import { friendLevelsArr } from "@mocks/friend-levels";
 import styles from "./FilterForm.module.css";
 
-const FilterForm = ({ toggleShowForm }) => {
-  const [filters, setFilters] = useState([]);
-
-  const onChange = (event) => {
-    const { value } = event.target;
-    let newState = [...filters];
-    if (filters.includes(value)) {
-      newState = newState.filter((el) => el !== value);
-    } else {
-      newState.push(value);
-    }
-
-    setFilters(newState);
+const FilterForm = ({ toggleShowForm, addFilters }) => {
+  const checkboxRefs = {
+    1: useRef(),
+    2: useRef(),
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(filters);
+    const checkedLevels = friendLevelsArr.filter(
+      (f) => checkboxRefs[f.level].current.checked === true
+    );
+    const filters = checkedLevels.map((l) => l.level);
+    addFilters(filters);
+    toggleShowForm();
   };
 
   return (
@@ -46,7 +42,7 @@ const FilterForm = ({ toggleShowForm }) => {
               key={el.text}
               text={el.text}
               value={el.level}
-              onChange={onChange}
+              checkboxRef={checkboxRefs[el.level]}
             />
           ))}
           <Button className={styles.submit_btn} type="submit">
@@ -58,8 +54,9 @@ const FilterForm = ({ toggleShowForm }) => {
   );
 };
 
-FilterForm.propTypes = {};
-
-FilterForm.defaultProps = {};
+FilterForm.propTypes = {
+  toggleShowForm: PropTypes.func.isRequired,
+  addFilters: PropTypes.func.isRequired,
+};
 
 export default FilterForm;

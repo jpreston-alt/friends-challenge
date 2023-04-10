@@ -17,7 +17,7 @@ Button.propTypes = {
   variant: PropTypes.oneOf(["primary", "outlined", "text"]),
   disabled: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   className: PropTypes.string,
   type: PropTypes.oneOf(["submit", "button"]),
 };

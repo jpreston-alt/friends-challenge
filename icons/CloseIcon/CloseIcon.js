@@ -11,14 +11,14 @@ const CloseIcon = () => (
     <path
       d="M1 1L10 10"
       stroke="#424242"
-      stroke-width="2"
-      stroke-linecap="round"
+      strokeWidth="2"
+      strokeLinecap="round"
     />
     <path
       d="M10 1L1 10"
       stroke="#424242"
-      stroke-width="2"
-      stroke-linecap="round"
+      strokeWidth="2"
+      strokeLinecap="round"
     />
   </svg>
 );
