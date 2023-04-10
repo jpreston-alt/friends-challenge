@@ -4,7 +4,12 @@ import { Button, FilterForm } from "@components";
 import { FilterIcon } from "@icons";
 import styles from "./FilterFormContainer.module.css";
 
-const FilterFormContainer = ({ addFilters, clearFilters, disableClear }) => {
+const FilterFormContainer = ({
+  addFilters,
+  clearFilters,
+  disableClear,
+  filters,
+}) => {
   const [showForm, setShowForm] = useState(false);
   const toggleShowForm = () => setShowForm(!showForm);
 
@@ -20,7 +25,11 @@ const FilterFormContainer = ({ addFilters, clearFilters, disableClear }) => {
         </Button>
       </div>
       {showForm ? (
-        <FilterForm toggleShowForm={toggleShowForm} addFilters={addFilters} />
+        <FilterForm
+          toggleShowForm={toggleShowForm}
+          addFilters={addFilters}
+          filters={filters}
+        />
       ) : (
         <></>
       )}
@@ -32,6 +41,7 @@ FilterFormContainer.propTypes = {
   addFilters: PropTypes.func.isRequired,
   clearFilters: PropTypes.func.isRequired,
   disableClear: PropTypes.bool.isRequired,
+  filters: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default FilterFormContainer;

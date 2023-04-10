@@ -5,14 +5,13 @@ import { CloseIcon } from "@icons";
 import { friendLevelsArr } from "@mocks/friend-levels";
 import styles from "./FilterForm.module.css";
 
-const FilterForm = ({ toggleShowForm, addFilters }) => {
-  const [selected, setSelected] = useState([]);
+const FilterForm = ({ toggleShowForm, addFilters, filters }) => {
+  const [selected, setSelected] = useState(filters);
   const disableClear = selected.length === 0;
   const handleClear = () => setSelected([]);
 
   const onChange = (event) => {
     const value = Number(event.target.value);
-
     // TODO clean this up
     let tempSelected = [...selected];
     if (selected.includes(value)) {
@@ -21,7 +20,7 @@ const FilterForm = ({ toggleShowForm, addFilters }) => {
       tempSelected.push(value);
     }
 
-    setSelected([value]);
+    setSelected(tempSelected);
   };
 
   const onSubmit = (event) => {
@@ -31,7 +30,7 @@ const FilterForm = ({ toggleShowForm, addFilters }) => {
   };
 
   return (
-    <div className={styles.container} data-popover="up">
+    <div className={styles.container}>
       <div className={styles.title_container}>
         <Button variant="text" onClick={handleClear} disabled={disableClear}>
           Clear All
@@ -69,6 +68,7 @@ const FilterForm = ({ toggleShowForm, addFilters }) => {
 FilterForm.propTypes = {
   toggleShowForm: PropTypes.func.isRequired,
   addFilters: PropTypes.func.isRequired,
+  filters: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default FilterForm;

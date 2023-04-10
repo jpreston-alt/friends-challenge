@@ -22,6 +22,7 @@ const Friends = () => {
         addFilters={addFilters}
         clearFilters={clearFilters}
         disableClear={disableClear}
+        filters={filters}
       />
       {friendsToDisplay.map((friend) => (
         <FriendCard key={friend.id} {...friend} />
