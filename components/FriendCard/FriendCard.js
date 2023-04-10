@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text, Chip } from "@components";
+import { Text, Chip, Card } from "@components";
 import { friendLevels } from "@mocks/friend-levels";
 import styles from "./FriendCard.module.css";
 
 const FriendCard = ({ name, email, phone, friendLevel }) => {
   return (
-    <div className={styles.container}>
+    <Card>
       <div className={styles.title_container}>
         <Text variant="h4" className={styles.title}>
           {name}
@@ -23,7 +23,7 @@ const FriendCard = ({ name, email, phone, friendLevel }) => {
       <Text color="secondary">
         {email} &middot; {phone}
       </Text>
-    </div>
+    </Card>
   );
 };
 

@@ -10,3 +10,4 @@ export { default as Chip } from "./Chip/Chip";
 export { default as FilterForm } from "./FilterForm/FilterForm";
 export { default as FilterFormContainer } from "./FilterFormContainer/FilterFormContainer";
 export { default as Checkbox } from "./Checkbox/Checkbox";
+export { default as Card } from "./Card/Card";
