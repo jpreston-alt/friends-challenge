@@ -13,3 +13,4 @@ export { default as Checkbox } from "./Checkbox/Checkbox";
 export { default as Card } from "./Card/Card";
 export { default as Loader } from "./Loader/Loader";
 export { default as LoaderCard } from "./LoaderCard/LoaderCard";
+export { default as FriendsList } from "./FriendsList/FriendsList";

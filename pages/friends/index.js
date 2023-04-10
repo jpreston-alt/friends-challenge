@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FriendCard, FilterFormContainer } from "@components";
+import { FilterFormContainer, FriendsList, LoaderCard } from "@components";
 import styles from "./friends.module.css";
 
 const Friends = () => {
@@ -20,9 +20,9 @@ const Friends = () => {
   const clearFilters = () => setFilters([]);
   const disableClear = filters.length === 0;
 
-  let friendsToDisplay = [...friends];
+  let friendsFiltered = [...friends];
   if (filters.length > 0)
-    friendsToDisplay = friends.filter((f) => filters.includes(f.friendLevel));
+    friendsFiltered = friends.filter((f) => filters.includes(f.friendLevel));
 
   return (
     <div className={styles.container}>
@@ -32,9 +32,8 @@ const Friends = () => {
         disableClear={disableClear}
         filters={filters}
       />
-      {friendsToDisplay.map((friend) => (
-        <FriendCard key={friend.id} {...friend} />
-      ))}
+      <FriendsList friends={friendsFiltered} />
+      <LoaderCard />
     </div>
   );
 };
