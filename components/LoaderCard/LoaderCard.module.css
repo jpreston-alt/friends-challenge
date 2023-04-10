@@ -1,0 +1,12 @@
+.container {
+  padding: var(--spacing_1) 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row:not(:last-child) {
+  margin-bottom: var(--spacing_2);
+}

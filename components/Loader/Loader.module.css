@@ -2,7 +2,16 @@
   border-radius: var(--border-radius-pill);
   background: linear-gradient(
     90deg,
-    #eaeaea 26.47%,
+    var(--gray_200) 26.47%,
     rgba(234, 234, 234, 0.25) 100%
   );
+}
+
+.gradient-lr {
+  composes: container;
+}
+
+.gradient-rl {
+  composes: container;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
