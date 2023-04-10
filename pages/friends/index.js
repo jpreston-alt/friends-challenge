@@ -2,12 +2,20 @@ import { useState, useEffect } from "react";
 import { FriendCard, FilterFormContainer } from "@components";
 import styles from "./friends.module.css";
 
-// TODO replace with /api/friends
-import { friendsData } from "@mocks/friends-data";
-
 const Friends = () => {
   const [filters, setFilters] = useState([]);
-  const [friends, setFriends] = useState(friendsData);
+  const [friends, setFriends] = useState([]);
+
+  useEffect(() => {
+    const getFriends = async () => {
+      const res = await fetch("/api/friends");
+      const resJson = await res.json();
+      setFriends((friends) => [...friends, ...resJson]);
+    };
+
+    getFriends();
+  }, []);
+
   const addFilters = (_filters) => setFilters(_filters);
   const clearFilters = () => setFilters([]);
   const disableClear = filters.length === 0;
