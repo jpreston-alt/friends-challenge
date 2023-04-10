@@ -11,7 +11,19 @@ const Friends = () => {
     friends,
     pageSize,
     lastItemRef,
+    isLastPage,
   } = useFriends();
+
+  const LastEl = () => {
+    if (isLastPage) return <>No More Friends</>;
+    if (filters.length === 0)
+      return (
+        <div ref={lastItemRef}>
+          <LoaderCard />
+        </div>
+      );
+    return <></>;
+  };
 
   return (
     <div className={styles.container}>
@@ -22,13 +34,14 @@ const Friends = () => {
         filters={filters}
       />
       <FriendsList friends={friends} pageSize={pageSize} />
-      {filters.length === 0 ? (
+      {isLastPage ? (
+        <>No More Friends</>
+      ) : (
         <div ref={lastItemRef}>
           <LoaderCard />
         </div>
-      ) : (
-        <></>
       )}
+      {/* <LastEl /> */}
     </div>
   );
 };

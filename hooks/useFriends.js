@@ -6,6 +6,7 @@ const useFriends = () => {
   const [filters, setFilters] = useState([]);
   const [friends, setFriends] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [isLastPage, setIsLastPage] = useState(false);
   const lastItemRef = useRef();
 
   useEffect(() => {
@@ -14,26 +15,30 @@ const useFriends = () => {
         `/api/friends?limit=${pageSize}&page=${currentPage}`
       );
       const resJson = await res.json();
-      setFriends((friends) => [...friends, ...resJson]);
+      setIsLastPage(resJson.isLastPage);
+      setFriends((friends) => [...friends, ...resJson.data]);
     };
 
     getFriends();
   }, [currentPage]);
 
   useEffect(() => {
+    if (!lastItemRef.current) return;
+
     const options = {
       root: null, // which el to check intersection with, if null it's viewport
       rootMargin: "0px", // grows or shrinks root el's bounding box before calculating intersection
-      threshold: 1.0, //percent of target el visible to trigger callback
+      threshold: 0.1, //percent of target el visible to trigger callback
     };
 
     // callback fires when intersection occurs
-    const callback = () => setCurrentPage((currentPage) => currentPage + 1);
+    const callback = (entries) => {
+      if (!entries[0].isIntersecting) return;
+      setCurrentPage((currentPage) => currentPage + 1);
+    };
 
     // create new observer
     let observer = new IntersectionObserver(callback, options);
-
-    if (!lastItemRef.current) return;
 
     // target element to be observed
     observer.observe(lastItemRef.current);
@@ -55,6 +60,7 @@ const useFriends = () => {
     friends: friendsFiltered,
     pageSize,
     lastItemRef,
+    isLastPage,
   };
 };
 
