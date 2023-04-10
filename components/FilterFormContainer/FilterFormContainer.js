@@ -20,11 +20,7 @@ const FilterFormContainer = ({ addFilters, clearFilters, disableClear }) => {
         </Button>
       </div>
       {showForm ? (
-        <FilterForm
-          toggleShowForm={toggleShowForm}
-          addFilters={addFilters}
-          clearFilters={clearFilters}
-        />
+        <FilterForm toggleShowForm={toggleShowForm} addFilters={addFilters} />
       ) : (
         <></>
       )}

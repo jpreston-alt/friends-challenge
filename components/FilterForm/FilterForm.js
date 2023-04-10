@@ -1,36 +1,39 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Button, Text, Checkbox } from "@components";
 import { CloseIcon } from "@icons";
 import { friendLevelsArr } from "@mocks/friend-levels";
 import styles from "./FilterForm.module.css";
 
-const FilterForm = ({
-  toggleShowForm,
-  addFilters,
-  clearFilters,
-  disableClear,
-}) => {
-  const checkboxRefs = {
-    1: useRef(),
-    2: useRef(),
+const FilterForm = ({ toggleShowForm, addFilters }) => {
+  const [selected, setSelected] = useState([]);
+  const disableClear = selected.length === 0;
+  const handleClear = () => setSelected([]);
+
+  const onChange = (event) => {
+    const value = Number(event.target.value);
+
+    // TODO clean this up
+    let tempSelected = [...selected];
+    if (selected.includes(value)) {
+      tempSelected = tempSelected.filter((el) => el !== value);
+    } else {
+      tempSelected.push(value);
+    }
+
+    setSelected([value]);
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    const checkedLevels = friendLevelsArr.filter(
-      (f) => checkboxRefs[f.level].current.checked === true
-    );
-
-    const filters = checkedLevels.map((l) => l.level);
-    addFilters(filters);
+    addFilters(selected);
     toggleShowForm();
   };
 
   return (
     <div className={styles.container} data-popover="up">
       <div className={styles.title_container}>
-        <Button variant="text" onClick={clearFilters} disabled={disableClear}>
+        <Button variant="text" onClick={handleClear} disabled={disableClear}>
           Clear All
         </Button>
         <Text variant="h3" className={styles.title}>
@@ -50,7 +53,8 @@ const FilterForm = ({
               key={el.text}
               text={el.text}
               value={el.level}
-              checkboxRef={checkboxRefs[el.level]}
+              checked={selected.includes(el.level)}
+              onChange={onChange}
             />
           ))}
           <Button className={styles.submit_btn} type="submit">
@@ -65,8 +69,6 @@ const FilterForm = ({
 FilterForm.propTypes = {
   toggleShowForm: PropTypes.func.isRequired,
   addFilters: PropTypes.func.isRequired,
-  clearFilters: PropTypes.func.isRequired,
-  disableClear: PropTypes.bool.isRequired,
 };
 
 export default FilterForm;

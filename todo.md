@@ -15,3 +15,9 @@ extra:
 ## questions
 
 - should the side nav collapse?
+
+## misc
+
+- center home screen header
+- fix col widths in form header
+- fix form title font-weight
