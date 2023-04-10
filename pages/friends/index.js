@@ -1,4 +1,9 @@
-import { FilterFormContainer, FriendsList, LoaderCard } from "@components";
+import {
+  FilterFormContainer,
+  FriendsList,
+  LoaderCard,
+  Text,
+} from "@components";
 import { useFriends } from "@hooks";
 import styles from "./friends.module.css";
 
@@ -14,15 +19,19 @@ const Friends = () => {
     isLastPage,
   } = useFriends();
 
-  const LastEl = () => {
-    if (isLastPage) return <>No More Friends</>;
-    if (filters.length === 0)
+  const getLastEl = () => {
+    if (filters.length > 0) return <></>;
+    if (isLastPage)
       return (
-        <div ref={lastItemRef}>
-          <LoaderCard />
-        </div>
+        <Text color="secondary" className={styles.text_end}>
+          End of Content
+        </Text>
       );
-    return <></>;
+    return (
+      <div ref={lastItemRef}>
+        <LoaderCard />
+      </div>
+    );
   };
 
   return (
@@ -34,14 +43,7 @@ const Friends = () => {
         filters={filters}
       />
       <FriendsList friends={friends} pageSize={pageSize} />
-      {isLastPage ? (
-        <>No More Friends</>
-      ) : (
-        <div ref={lastItemRef}>
-          <LoaderCard />
-        </div>
-      )}
-      {/* <LastEl /> */}
+      {getLastEl()}
     </div>
   );
 };
