@@ -22,6 +22,7 @@
 
   /* shape */
   --border-radius: 6px;
+  --border-radius_small: 1px;
   --border-radius-pill: 30px;
 
   /* shadow */

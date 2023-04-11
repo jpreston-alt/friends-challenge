@@ -6,11 +6,26 @@
 }
 
 .checkbox {
-  height: 19px;
-  width: 19px;
-  border: 1.5px solid var(--gray_600);
+  height: var(--spacing_4);
+  width: var(--spacing_4);
+  border: 2px solid var(--gray_600);
   accent-color: var(--blue);
-  color: salmon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  border-radius: var(--border-radius_small);
+  font-size: 16px;
+}
+
+.checkbox:checked {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.checkbox:checked:after {
+  content: "\2713";
+  color: white;
 }
 
 .label {

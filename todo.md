@@ -12,7 +12,7 @@
 - fix col widths in form header
 - fix form title font-weight
 - ~~fix filter icon button~~
-- ~~filter icon button active color~~
+- ~~filter icon button focus color~~
 - fix check mark color
 - error component / screens
 - add fade animations to loader components
