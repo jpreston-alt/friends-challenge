@@ -22,4 +22,4 @@
 - on click away close filter form
 - mobile responsiveness
 - ~~clean up todos~~
-- create useIntersectioApi hook
+- create useIntersectionApi hook
