@@ -14,8 +14,23 @@
   padding: var(--spacing_3) var(--spacing_4);
 }
 
-.title {
-  margin: 0;
+.title_item {
+  width: 33.33%;
+}
+
+.title_item_1 {
+  composes: title_item;
+  text-align: left;
+}
+
+.title_item_2 {
+  composes: title_item;
+  text-align: center;
+}
+
+.title_item_3 {
+  composes: title_item;
+  text-align: right;
 }
 
 .form_title {

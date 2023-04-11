@@ -5,11 +5,9 @@ import styles from "./Checkbox.module.css";
 
 const Checkbox = ({ text, value, checked, onChange }) => (
   <div className={styles.container}>
-    <label htmlFor="vehicle1">
-      <Text variant="label" className={styles.label}>
-        {text}
-      </Text>
-    </label>
+    <Text variant="label" className={styles.label} htmlFor={text}>
+      {text}
+    </Text>
     <input
       type="checkbox"
       id={text}

@@ -5,12 +5,6 @@
   font-weight: 600;
 }
 
-.button:disabled {
-  color: var(--gray_400);
-  background: none;
-  cursor: not-allowed;
-}
-
 .icon {
   fill: var(--white);
   stroke: var(--hover_medium);
@@ -62,4 +56,10 @@
 
 .text:hover {
   background: var(--hover_light);
+}
+
+.button:disabled {
+  color: var(--gray_400);
+  background: none;
+  cursor: not-allowed;
 }

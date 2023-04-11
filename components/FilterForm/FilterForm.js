@@ -32,15 +32,19 @@ const FilterForm = ({ toggleShowForm, addFilters, filters }) => {
   return (
     <div className={styles.container}>
       <div className={styles.title_container}>
-        <Button variant="text" onClick={handleClear} disabled={disableClear}>
-          Clear All
-        </Button>
-        <Text variant="h3" className={styles.title}>
-          Filter
-        </Text>
-        <Button variant="text" onClick={toggleShowForm}>
-          <CloseIcon />
-        </Button>
+        <div className={styles.title_item_1}>
+          <Button variant="text" onClick={handleClear} disabled={disableClear}>
+            Clear All
+          </Button>
+        </div>
+        <div className={styles.title_item_2}>
+          <Text variant="h3">Filter</Text>
+        </div>
+        <div className={styles.title_item_3}>
+          <Button variant="text" onClick={toggleShowForm}>
+            <CloseIcon />
+          </Button>
+        </div>
       </div>
       <Text variant="h5" color="secondary" className={styles.form_title}>
         Friend Status

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: var(--spacing_5);
-  gap: var(--spacing_12);
+  gap: var(--spacing_19);
 }
 
 .checkbox {
