@@ -3,6 +3,7 @@ import {
   FriendsList,
   LoaderCard,
   Text,
+  Error,
 } from "@components";
 import { useFriends } from "@hooks";
 import styles from "./friends.module.css";
@@ -17,7 +18,10 @@ const Friends = () => {
     pageSize,
     lastItemRef,
     isLastPage,
+    error,
   } = useFriends();
+
+  if (error) return <Error message={error} />;
 
   const getLastEl = () => {
     if (filters.length > 0) return <></>;

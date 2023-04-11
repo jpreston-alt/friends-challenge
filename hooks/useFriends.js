@@ -7,16 +7,21 @@ const useFriends = () => {
   const [friends, setFriends] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLastPage, setIsLastPage] = useState(false);
+  const [error, setError] = useState(null);
   const lastItemRef = useRef();
 
   useEffect(() => {
     const getFriends = async () => {
-      const res = await fetch(
-        `/api/friends?limit=${pageSize}&page=${currentPage}`
-      );
-      const resJson = await res.json();
-      setIsLastPage(resJson.isLastPage);
-      setFriends((friends) => [...friends, ...resJson.data]);
+      try {
+        const res = await fetch(
+          `/api/friends?limit=${pageSize}&page=${currentPage}`
+        );
+        const resJson = await res.json();
+        setIsLastPage(resJson.isLastPage);
+        setFriends((friends) => [...friends, ...resJson.data]);
+      } catch (e) {
+        setError(e.message);
+      }
     };
 
     getFriends();
@@ -61,6 +66,7 @@ const useFriends = () => {
     pageSize,
     lastItemRef,
     isLastPage,
+    error,
   };
 };
 
