@@ -2,7 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Button.module.css";
 
-const Button = ({ variant, disabled, children, onClick, className, type }) => {
+const Button = ({
+  variant,
+  disabled,
+  children,
+  onClick,
+  className,
+  type,
+  Icon,
+}) => {
   let classNames = styles[variant];
   if (className) classNames += ` ${className}`;
 
@@ -13,6 +21,7 @@ const Button = ({ variant, disabled, children, onClick, className, type }) => {
       onClick={onClick}
       type={type}
     >
+      {Icon && <Icon className={styles.icon} />}
       {children}
     </button>
   );
@@ -21,10 +30,11 @@ const Button = ({ variant, disabled, children, onClick, className, type }) => {
 Button.propTypes = {
   variant: PropTypes.oneOf(["primary", "outlined", "text"]),
   disabled: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   onClick: PropTypes.func,
   className: PropTypes.string,
   type: PropTypes.oneOf(["submit", "button"]),
+  Icon: PropTypes.func,
 };
 
 Button.defaultProps = {
@@ -32,6 +42,8 @@ Button.defaultProps = {
   disabled: false,
   className: null,
   type: "button",
+  Icon: null,
+  children: null,
 };
 
 export default Button;

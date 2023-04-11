@@ -48,3 +48,13 @@
   background: none;
   cursor: not-allowed;
 }
+
+.icon {
+  fill: var(--white);
+  stroke: var(--hover_medium);
+}
+
+.button:hover .icon {
+  fill: var(--hover_medium);
+  stroke: var(--white);
+}

@@ -16,9 +16,7 @@ const FilterFormContainer = ({
   return (
     <div className={styles.container}>
       <div className={styles.button_container}>
-        <Button variant="outlined" onClick={toggleShowForm}>
-          <FilterIcon />
-        </Button>
+        <Button variant="outlined" onClick={toggleShowForm} Icon={FilterIcon} />
         <hr className={styles.separator}></hr>
         <Button variant="text" onClick={clearFilters} disabled={disableClear}>
           Clear All

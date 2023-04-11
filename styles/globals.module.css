@@ -8,3 +8,13 @@
   justify-content: center;
   height: calc(100% - var(--navbar-height));
 }
+
+.icon_light {
+  fill: none;
+  stroke: var(--gray_200);
+}
+
+.icon_dark {
+  fill: var(--white);
+  stroke: var(--hover_medium);
+}
