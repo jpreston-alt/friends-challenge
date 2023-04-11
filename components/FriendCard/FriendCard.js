@@ -11,13 +11,11 @@ const FriendCard = ({ name, email, phone, friendLevel, showHover }) => {
         <Text variant="h4" className={styles.title}>
           {name}
         </Text>
-        {friendLevel > 0 ? (
+        {friendLevel > 0 && (
           <Chip
             text={friendLevels[friendLevel].text}
             color={friendLevels[friendLevel].color}
           />
-        ) : (
-          <></>
         )}
       </div>
       <Text color="secondary">

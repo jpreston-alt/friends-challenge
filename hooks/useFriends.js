@@ -30,20 +30,23 @@ const useFriends = () => {
   useEffect(() => {
     if (!lastItemRef.current) return;
 
-    const options = {
-      root: null, // which el to check intersection with, if null it's viewport
-      rootMargin: "0px", // grows or shrinks root el's bounding box before calculating intersection
-      threshold: 0.1, //percent of target el visible to trigger callback
+    const intersectionOptions = {
+      root: null, // el to check intersection with, if null it's viewport
+      rootMargin: "0px", // root el's bounding box before calculating intersection
+      threshold: 0.1, // 5 of target el visible to trigger callback
     };
 
     // callback fires when intersection occurs
-    const callback = (entries) => {
+    const intersectionCallback = (entries) => {
       if (!entries[0].isIntersecting) return;
       setCurrentPage((currentPage) => currentPage + 1);
     };
 
     // create new observer
-    let observer = new IntersectionObserver(callback, options);
+    const observer = new IntersectionObserver(
+      intersectionCallback,
+      intersectionOptions
+    );
 
     // target element to be observed
     observer.observe(lastItemRef.current);

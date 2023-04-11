@@ -17,9 +17,7 @@
 - ~~error component / screens~~
 - ~~add fade animations to loader components~~
 - ~~create /friends/[slug] screen~~
-- change favicon
-- check ternary vs && vs <></>
+- ~~change favicon~~
+- ~~check ternary vs && vs <></>~~
 - on click away close filter form
-- mobile responsiveness
 - ~~clean up todos~~
-- create useIntersectionApi hook

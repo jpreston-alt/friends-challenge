@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Button, FilterForm } from "@components";
 import { FilterIcon } from "@icons";
@@ -12,6 +12,20 @@ const FilterFormContainer = ({
 }) => {
   const [showForm, setShowForm] = useState(false);
   const toggleShowForm = () => setShowForm(!showForm);
+  const dropdownEl = useRef();
+
+  useEffect(() => {
+    if (!dropdownEl.current || !showForm) return;
+
+    const handleClickAway = (event) => {
+      if (dropdownEl.current.contains(event.target)) return;
+      setShowForm(false);
+    };
+
+    document.addEventListener("mousedown", handleClickAway);
+
+    return () => document.removeEventListener("mousedown", handleClickAway);
+  }, [dropdownEl, showForm]);
 
   return (
     <div className={styles.container}>
@@ -22,14 +36,14 @@ const FilterFormContainer = ({
           Clear All
         </Button>
       </div>
-      {showForm ? (
-        <FilterForm
-          toggleShowForm={toggleShowForm}
-          addFilters={addFilters}
-          filters={filters}
-        />
-      ) : (
-        <></>
+      {showForm && (
+        <div ref={dropdownEl}>
+          <FilterForm
+            toggleShowForm={toggleShowForm}
+            addFilters={addFilters}
+            filters={filters}
+          />
+        </div>
       )}
     </div>
   );
