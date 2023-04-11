@@ -2,10 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Card.module.css";
 
-const Card = ({ children }) => (
-  <div className={styles.container}>{children}</div>
-);
+const Card = ({ children, className }) => {
+  let classNames = styles.container;
+  if (className) classNames += ` ${className}`;
 
-Card.propTypes = { children: PropTypes.node.isRequired };
+  return <div className={classNames}>{children}</div>;
+};
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
+
+Card.defaultProps = {
+  className: null,
+};
 
 export default Card;

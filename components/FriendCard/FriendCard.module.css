@@ -8,3 +8,7 @@
 .title {
   margin: 0;
 }
+
+.hover:hover {
+  box-shadow: var(--box-shadow_2);
+}

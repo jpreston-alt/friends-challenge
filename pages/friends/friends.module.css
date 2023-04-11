@@ -10,3 +10,7 @@
   text-align: center;
   margin-bottom: var(--spacing_3);
 }
+
+.back_btn {
+  margin-bottom: var(--spacing_2);
+}

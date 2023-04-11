@@ -4,9 +4,9 @@ import { Text, Chip, Card } from "@components";
 import { friendLevels } from "@mocks/friend-levels";
 import styles from "./FriendCard.module.css";
 
-const FriendCard = ({ name, email, phone, friendLevel }) => {
+const FriendCard = ({ name, email, phone, friendLevel, showHover }) => {
   return (
-    <Card>
+    <Card className={showHover && styles.hover}>
       <div className={styles.title_container}>
         <Text variant="h4" className={styles.title}>
           {name}

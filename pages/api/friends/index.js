@@ -3,6 +3,8 @@ import { friendsData } from "@mocks/friends-data";
 const handler = (req, res) => {
   const { limit, page } = req.query;
 
+  if (!page || !limit) return res.status(200).json({ data: friendsData });
+
   const startIndex = Number(page) * Number(limit) - 10;
   let endIndex = startIndex + Number(limit);
   let isLastPage = false;
@@ -14,7 +16,7 @@ const handler = (req, res) => {
   const friendsPaginated = friendsData.slice(startIndex, endIndex);
 
   setTimeout(() => {
-    res.status(200).json({ data: friendsPaginated, isLastPage });
+    return res.status(200).json({ data: friendsPaginated, isLastPage });
   }, "1000");
 };
 
