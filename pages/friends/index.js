@@ -35,7 +35,7 @@ const Friends = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <FilterFormContainer
         addFilters={addFilters}
         clearFilters={clearFilters}
@@ -44,7 +44,7 @@ const Friends = () => {
       />
       <FriendsList friends={friends} pageSize={pageSize} />
       {getLastEl()}
-    </div>
+    </main>
   );
 };
 

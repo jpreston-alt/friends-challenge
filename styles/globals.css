@@ -54,7 +54,3 @@ body {
 a {
   text-decoration: none;
 }
-
-main {
-  height: calc(100% - var(--navbar-height));
-}

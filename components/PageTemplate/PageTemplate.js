@@ -14,7 +14,7 @@ const PageTemplate = ({ children, pageName }) => {
       </div>
       <div className={styles.page_container}>
         <NavBar pageName={pageName} />
-        <main>{children}</main>
+        {children}
       </div>
     </div>
   );
