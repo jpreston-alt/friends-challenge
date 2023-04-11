@@ -15,11 +15,11 @@
 - ~~filter icon button focus color~~
 - ~~fix check mark color~~
 - ~~error component / screens~~
-- add fade animations to loader components
-- create /friends/[slug] screen
+- ~~add fade animations to loader components~~
+- ~~create /friends/[slug] screen~~
 - change favicon
 - check ternary vs && vs <></>
 - on click away close filter form
 - mobile responsiveness
-- clean up todos
+- ~~clean up todos~~
 - create useIntersectioApi hook
