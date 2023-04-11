@@ -12,10 +12,11 @@
 - fix col widths in form header
 - fix form title font-weight
 - ~~fix filter icon button~~
-- filter icon button active color
+- ~~filter icon button active color~~
 - fix check mark color
 - error component / screens
 - add fade animations to loader components
 - create /friends/[slug] screen
 - change favicon
-- check ternary vs &&
+- check ternary vs && vs <></>
+- on click away close filter form

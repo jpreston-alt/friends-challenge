@@ -5,6 +5,18 @@
   font-weight: 600;
 }
 
+.button:disabled {
+  color: var(--gray_400);
+  background: none;
+  cursor: not-allowed;
+}
+
+.icon {
+  fill: var(--white);
+  stroke: var(--hover_medium);
+}
+
+/* variant primary */
 .primary {
   composes: button;
   color: var(--white);
@@ -18,6 +30,7 @@
   background-color: var(--hover_dark);
 }
 
+/* variant outlined */
 .outlined {
   composes: button;
   border-radius: var(--border-radius-pill);
@@ -27,10 +40,18 @@
   background-color: var(--white);
 }
 
-.outlined:hover {
+.outlined:hover,
+.outlined:focus {
   background-color: var(--hover_medium);
 }
 
+.outlined:hover .icon,
+.outlined:focus .icon {
+  fill: var(--hover_medium);
+  stroke: var(--white);
+}
+
+/* variant text */
 .text {
   composes: button;
   background: none;
@@ -41,20 +62,4 @@
 
 .text:hover {
   background: var(--hover_light);
-}
-
-.button:disabled {
-  color: var(--gray_400);
-  background: none;
-  cursor: not-allowed;
-}
-
-.icon {
-  fill: var(--white);
-  stroke: var(--hover_medium);
-}
-
-.button:hover .icon {
-  fill: var(--hover_medium);
-  stroke: var(--white);
 }
