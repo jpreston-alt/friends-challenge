@@ -12,10 +12,10 @@ const FilterForm = ({ toggleShowForm, addFilters, filters }) => {
 
   const onChange = (event) => {
     const value = Number(event.target.value);
-    // TODO clean this up
     let tempSelected = [...selected];
     if (selected.includes(value)) {
-      tempSelected = tempSelected.filter((el) => el !== value);
+      const index = tempSelected.indexOf(value);
+      tempSelected.splice(index, 1);
     } else {
       tempSelected.push(value);
     }

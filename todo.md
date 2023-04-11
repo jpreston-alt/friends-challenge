@@ -10,7 +10,7 @@
 
 - ~~center home screen header~~
 - ~~fix col widths in form header~~
-- fix form title font-weight
+- ~~fix form title font-weight~~
 - ~~fix filter icon button~~
 - ~~filter icon button focus color~~
 - ~~fix check mark color~~
