@@ -2,10 +2,6 @@
   display: flex;
 }
 
-.side_nav_container {
-  width: 250px;
-}
-
 .page_container {
   flex-grow: 1;
 }

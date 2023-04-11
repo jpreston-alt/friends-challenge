@@ -11,7 +11,7 @@
 .separator {
   border: 0;
   border-left: 1px solid var(--gray_400);
-  height: 30px;
+  height: var(--spacing_6);
   display: inline-block;
   margin: 0 var(--spacing_3);
 }

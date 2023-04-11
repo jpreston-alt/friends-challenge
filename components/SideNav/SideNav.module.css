@@ -11,4 +11,5 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing_2);
+  padding: 0 var(--spacing_6);
 }

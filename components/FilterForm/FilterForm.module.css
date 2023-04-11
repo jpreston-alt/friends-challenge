@@ -1,7 +1,6 @@
 .container {
   box-shadow: var(--box-shadow_2);
   border-radius: var(--border-radius);
-  width: 320px;
   position: absolute;
   background: var(--bg_light);
 }

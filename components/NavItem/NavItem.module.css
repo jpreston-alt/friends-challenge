@@ -6,9 +6,8 @@
   display: flex;
   align-items: center;
   gap: var(--spacing_2);
-  height: 40px;
   border-radius: var(--border-radius);
-  padding-left: var(--spacing_2);
+  padding: var(--spacing_2);
 }
 
 .link:hover span {

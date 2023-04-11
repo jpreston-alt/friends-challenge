@@ -7,7 +7,12 @@ const Button = ({ variant, disabled, children, onClick, className, type }) => {
   if (className) classNames += ` ${className}`;
 
   return (
-    <button disabled={disabled} className={classNames} onClick={onClick}>
+    <button
+      disabled={disabled}
+      className={classNames}
+      onClick={onClick}
+      type={type}
+    >
       {children}
     </button>
   );
