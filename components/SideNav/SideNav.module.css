@@ -1,6 +1,5 @@
 .container {
   background-color: var(--bg_dark);
-  min-height: 100vh;
   height: 100%;
   padding: var(--spacing_6) var(--spacing_3);
   box-sizing: border-box;

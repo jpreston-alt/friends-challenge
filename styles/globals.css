@@ -41,6 +41,9 @@
   --spacing_10: 50px;
   --spacing_11: 55px;
   --spacing_12: 60px;
+
+  /* height */
+  --navbar-height: 80px;
 }
 
 body {
@@ -50,4 +53,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+main {
+  height: calc(100% - var(--navbar-height));
 }

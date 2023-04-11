@@ -5,19 +5,15 @@
 - build pages
 - add filter functionality to friends page
 - implement infinite scroll/pagination on friends page
-- error checking
-
-extra:
-
-- add fade animations to loader components
-- create /friends/[slug] screen
-
-## questions
-
-- should the side nav collapse?
 
 ## misc
 
 - center home screen header
 - fix col widths in form header
 - fix form title font-weight
+- fix filter icon button
+- fix check mark color
+- error component / screens
+- add fade animations to loader components
+- create /friends/[slug] screen
+- change favicon
