@@ -1,6 +1,6 @@
 import { friendsData } from "@mocks/friends-data";
 
-const handler = (req, res) => {
+const handler = async (req, res) => {
   const { limit, page } = req.query;
 
   if (!page || !limit) return res.status(200).json({ data: friendsData });
@@ -15,9 +15,10 @@ const handler = (req, res) => {
   }
   const friendsPaginated = friendsData.slice(startIndex, endIndex);
 
-  setTimeout(() => {
-    return res.status(200).json({ data: friendsPaginated, isLastPage });
-  }, "1000");
+  const timeout = () => new Promise((resolve) => setTimeout(resolve, 1000));
+
+  await timeout(1000);
+  return res.status(200).json({ data: friendsPaginated, isLastPage });
 };
 
 export default handler;
