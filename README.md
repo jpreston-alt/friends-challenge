@@ -2,8 +2,8 @@
 
 [Deployed Application](https://friends-challenge.vercel.app/)
 
-<img src="public/images/desktop.png" alt="Login Page Image" height="400px" style="margin: 10px;"/>
-<img src="public/images/mobile.png" alt="Dashboard Image" height="400px" style="margin: 10px;"/>
+<img src="public/images/desktop.png" alt="Login Page Image" height="300px" style="margin: 10px;"/>
+<img src="public/images/mobile.png" alt="Dashboard Image" height="300px" style="margin: 10px;"/>
 
 ## Requirements
 
@@ -43,7 +43,7 @@ Run in production mode:
 Theme:
 
 - Theme handled using CSS module variables
-- components will handle their own theme
+- components will handle their own styles
 - globals defined in styles directory
 
 Structure:
@@ -51,9 +51,9 @@ Structure:
 - /components
   - each component has own directory and css module
   - components follow atomic design principals but are not separated into atoms/molecules/organism directories for simplicity
-    - atoms:
-    - molecules:
-    - organisms:
+    - atoms: Button, Text, Card, Chip, Error, Loader, NavItem
+    - molecules: Checkbox, FilterForm, FriendCard, FriendsList, LoaderCard, NavBar, NavMenu
+    - organisms: FilterFormContainer, PageTemplate, SideNav
 - /pages
   - /home: - no logic
   - /friends
