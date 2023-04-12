@@ -16,7 +16,7 @@ const PageTemplate = ({ children, pageName }) => {
     <div className={`${inter.className} ${styles.container}`}>
       {!isMobile && <SideNav />}
       <div className={styles.page_container}>
-        <NavBar pageName={pageName} isMobile={isMobile} />
+        <NavBar pageName={pageName} />
         {children}
       </div>
     </div>
