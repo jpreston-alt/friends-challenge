@@ -10,6 +10,7 @@ const Button = ({
   className,
   type,
   Icon,
+  dataArrtibute,
 }) => {
   let classNames = styles[variant];
   if (className) classNames += ` ${className}`;
@@ -20,6 +21,7 @@ const Button = ({
       className={classNames}
       onClick={onClick}
       type={type}
+      {...dataArrtibute}
     >
       {Icon && <Icon className={styles.icon} />}
       {children}

@@ -14,11 +14,20 @@ const FilterFormContainer = ({
   const [showForm, setShowForm] = useState(false);
   const toggleShowForm = () => setShowForm(!showForm);
   const dropdownEl = useClickAway({ eventHandler: toggleShowForm });
+  const filtersSelected = filters.length > 0;
 
   return (
     <div className={styles.container}>
       <div className={styles.button_container}>
-        <Button variant="outlined" onClick={toggleShowForm} Icon={FilterIcon} />
+        <Button
+          variant="outlined"
+          onClick={toggleShowForm}
+          Icon={FilterIcon}
+          className={styles.filter_btn}
+          dataArrtibute={{ ["data-filters"]: filtersSelected }}
+        >
+          {filtersSelected > 0 && filters.length}
+        </Button>
         <hr className={styles.separator}></hr>
         <Button variant="text" onClick={clearFilters} disabled={disableClear}>
           Clear All

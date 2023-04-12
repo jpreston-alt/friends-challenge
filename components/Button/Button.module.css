@@ -35,12 +35,15 @@
 }
 
 .outlined:hover,
-.outlined:focus {
+.outlined:focus,
+.outlined[data-filters="true"] {
   background-color: var(--hover_medium);
+  color: var(--white);
 }
 
 .outlined:hover .icon,
-.outlined:focus .icon {
+.outlined:focus .icon,
+.outlined[data-filters="true"] .icon {
   fill: var(--hover_medium);
   stroke: var(--white);
 }
