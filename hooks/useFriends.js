@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const pageSize = 10;
 
+// hook to handle logic from /friends page
 const useFriends = () => {
   const [filters, setFilters] = useState([]);
   const [friends, setFriends] = useState([]);

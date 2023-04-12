@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, Chip, Card } from "@components";
-import { friendLevels } from "@mocks/friend-levels";
+import { friendLevels } from "@constants/friend-levels";
 import styles from "./FriendCard.module.css";
 
 const FriendCard = ({ name, email, phone, friendLevel, showHover }) => {

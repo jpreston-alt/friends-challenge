@@ -1,33 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Button, Text, Checkbox } from "@components";
 import { CloseIcon } from "@icons";
-import { friendLevelsArr } from "@mocks/friend-levels";
+import { friendLevelsArr } from "@constants/friend-levels";
+import { useFilterForm } from "@hooks";
 import styles from "./FilterForm.module.css";
 
 const FilterForm = ({ toggleShowForm, addFilters, filters }) => {
-  const [selected, setSelected] = useState(filters);
-  const disableClear = selected.length === 0;
-  const handleClear = () => setSelected([]);
-
-  const onChange = (event) => {
-    const value = Number(event.target.value);
-    let tempSelected = [...selected];
-    if (selected.includes(value)) {
-      const index = tempSelected.indexOf(value);
-      tempSelected.splice(index, 1);
-    } else {
-      tempSelected.push(value);
-    }
-
-    setSelected(tempSelected);
-  };
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-    addFilters(selected);
-    toggleShowForm();
-  };
+  const { disableClear, handleClear, onChange, onSubmit, selected } =
+    useFilterForm({
+      toggleShowForm,
+      addFilters,
+      filters,
+    });
 
   return (
     <div className={styles.container}>

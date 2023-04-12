@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 
+// hook to handle click away event for filter popover form
 const useClickAway = ({ eventHandler }) => {
   const element = useRef();
 
