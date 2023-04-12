@@ -6,9 +6,10 @@ import { Text } from "@components";
 import styles from "./NavItem.module.css";
 
 const NavItem = ({ href, name, Icon }) => {
-  const { pathname } = useRouter();
+  const router = useRouter();
+  const { pathname } = router;
   let linkClassNames = styles.link;
-  const active = pathname === href;
+  const active = pathname === href || pathname.replace("/[slug]", "") === href;
 
   if (active) linkClassNames += ` ${styles.active}`;
 
