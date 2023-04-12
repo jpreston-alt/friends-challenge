@@ -3,8 +3,8 @@
 [Deployed Application](https://friends-challenge.vercel.app/)
 
 <div>
-  <img src="public/images/desktop.png" alt="Login Page Image" height="400px" style="margin: 10px;"/>
-  <img src="public/images/mobile.png" alt="Dashboard Image" height="400px" style="margin: 10px;"/>
+  <img src="public/images/desktop.png" alt="Login Page Image" height="300px" style="margin: 10px;"/>
+  <img src="public/images/mobile.png" alt="Dashboard Image" height="300px" style="margin: 10px;"/>
 </div>
 
 ## Requirements
