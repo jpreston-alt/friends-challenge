@@ -4,7 +4,6 @@ const useViewport = () => {
   const [viewport, setViewport] = useState(1080);
 
   useEffect(() => {
-    setViewport(window.innerWidth);
     const handleResize = () => setViewport(window.innerWidth);
     window.addEventListener("resize", handleResize);
   }, []);
