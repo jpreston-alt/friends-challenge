@@ -1,5 +1,6 @@
 import { friendsData } from "@mocks/friends-data";
 
+// handler to return all friends or paginated friends
 const handler = async (req, res) => {
   const { limit, page } = req.query;
 

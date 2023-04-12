@@ -23,7 +23,7 @@ const Friends = () => {
 
   if (error) return <Error message={error} />;
 
-  const getLastEl = () => {
+  const renderLastEl = () => {
     if (isLastPage)
       return (
         <Text color="secondary" className={styles.text_end}>
@@ -31,6 +31,7 @@ const Friends = () => {
         </Text>
       );
 
+    // hide element instead of not attaching to dom so ref can still be attached for intersection observer
     return (
       <div ref={lastItemRef} hidden={filters.length > 0}>
         <LoaderCard />
@@ -47,7 +48,7 @@ const Friends = () => {
         filters={filters}
       />
       <FriendsList friends={friends} pageSize={pageSize} />
-      {getLastEl()}
+      {renderLastEl()}
     </main>
   );
 };

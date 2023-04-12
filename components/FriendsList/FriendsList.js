@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { LoaderCard, FriendCard } from "@components";
 import Link from "next/link";
 
-const FriendsList = ({ friends, pageSize, showHover }) => {
+const FriendsList = ({ friends, pageSize }) => {
   if (friends.length === 0)
     return Array.from(Array(pageSize).keys()).map((el) => (
       <LoaderCard key={`loader-card-${el}`} />

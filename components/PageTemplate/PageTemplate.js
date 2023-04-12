@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Inter } from "next/font/google";
 import { NavBar, SideNav } from "@components";

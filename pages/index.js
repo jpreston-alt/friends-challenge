@@ -12,5 +12,6 @@ const Home = () => {
 export default Home;
 
 export const getStaticProps = () => ({
+  // pass page title as page props to be used in head title and nav title
   props: { title: "Home" },
 });

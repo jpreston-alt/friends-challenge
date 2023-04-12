@@ -2,6 +2,7 @@ import { FriendCard, Error, Button } from "@components";
 import Link from "next/link";
 import styles from "./friends.module.css";
 
+// friend and error props are returned from getStaticProps
 const Friend = ({ friend, error }) => {
   if (error) return <Error message={error} />;
 
@@ -26,6 +27,7 @@ const Friend = ({ friend, error }) => {
 
 export default Friend;
 
+// get all paths at build time
 export const getStaticPaths = async () => {
   try {
     const res = await fetch(`${process.env.API_URL}/api/friends`);
@@ -41,6 +43,7 @@ export const getStaticPaths = async () => {
   }
 };
 
+// statically generate all pages at build time
 export const getStaticProps = async ({ params }) => {
   try {
     const { slug: friendId } = params;

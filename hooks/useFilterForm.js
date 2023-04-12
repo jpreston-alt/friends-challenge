@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// hook to handle logic for filter form
 const useFilterForm = ({ toggleShowForm, addFilters, filters }) => {
   const [selected, setSelected] = useState(filters);
   const disableClear = selected.length === 0;

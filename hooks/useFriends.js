@@ -34,7 +34,7 @@ const useFriends = () => {
     const intersectionOptions = {
       root: null, // el to check intersection with, if null it's viewport
       rootMargin: "0px", // root el's bounding box before calculating intersection
-      threshold: 0.1, // 5 of target el visible to trigger callback
+      threshold: 0.5, // % of target el visible to trigger callback
     };
 
     // callback fires when intersection occurs
