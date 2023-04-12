@@ -6,26 +6,18 @@
 }
 
 .checkbox {
-  height: var(--spacing_4);
-  width: var(--spacing_4);
-  border: 2px solid var(--gray_600);
-  accent-color: var(--blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 19px;
+  width: 19px;
+  outline: 2px solid var(--gray_600);
   appearance: none;
   border-radius: var(--border-radius_small);
-  font-size: 16px;
 }
 
 .checkbox:checked {
-  background-color: var(--blue);
-  border: 2px solid var(--blue);
-}
-
-.checkbox:checked:after {
-  content: "\2713";
-  color: white;
+  outline: 2px solid var(--blue);
+  background: var(--blue)
+    url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.0625 4.20201L4.25446 7.39397L10 1.64844" stroke="white" stroke-width="1.51198" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    no-repeat 60% 50%;
 }
 
 .label {
