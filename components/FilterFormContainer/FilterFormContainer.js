@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Button, FilterForm } from "@components";
 import { FilterIcon } from "@icons";
+import { useClickAway } from "@hooks";
 import styles from "./FilterFormContainer.module.css";
 
 const FilterFormContainer = ({
@@ -12,20 +13,7 @@ const FilterFormContainer = ({
 }) => {
   const [showForm, setShowForm] = useState(false);
   const toggleShowForm = () => setShowForm(!showForm);
-  const dropdownEl = useRef();
-
-  useEffect(() => {
-    if (!dropdownEl.current || !showForm) return;
-
-    const handleClickAway = (event) => {
-      if (dropdownEl.current.contains(event.target)) return;
-      setShowForm(false);
-    };
-
-    document.addEventListener("mousedown", handleClickAway);
-
-    return () => document.removeEventListener("mousedown", handleClickAway);
-  }, [dropdownEl, showForm]);
+  const dropdownEl = useClickAway({ eventHandler: toggleShowForm });
 
   return (
     <div className={styles.container}>
