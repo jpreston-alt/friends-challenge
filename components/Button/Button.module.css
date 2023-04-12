@@ -39,6 +39,7 @@
 .outlined[data-filters="true"] {
   background-color: var(--hover_medium);
   color: var(--white);
+  border: none;
 }
 
 .outlined:hover .icon,
