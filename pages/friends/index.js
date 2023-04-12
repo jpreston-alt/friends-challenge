@@ -24,15 +24,15 @@ const Friends = () => {
   if (error) return <Error message={error} />;
 
   const getLastEl = () => {
-    if (filters.length > 0) return <></>;
     if (isLastPage)
       return (
         <Text color="secondary" className={styles.text_end}>
           End of Content
         </Text>
       );
+
     return (
-      <div ref={lastItemRef}>
+      <div ref={lastItemRef} hidden={filters.length > 0}>
         <LoaderCard />
       </div>
     );
