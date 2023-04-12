@@ -7,6 +7,8 @@
   align-items: center;
   justify-content: center;
   height: calc(100% - var(--navbar-height));
+  text-align: center;
+  padding: 0 var(--spacing_3);
 }
 
 .icon_light {
@@ -17,4 +19,10 @@
 .icon_dark {
   fill: var(--white);
   stroke: var(--hover_medium);
+}
+
+@media screen and (max-width: 480px) {
+  .center {
+    height: calc(100vh - var(--navbar-height));
+  }
 }

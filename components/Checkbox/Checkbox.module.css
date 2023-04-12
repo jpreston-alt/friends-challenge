@@ -17,7 +17,7 @@
   outline: 2px solid var(--blue);
   background: var(--blue)
     url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.0625 4.20201L4.25446 7.39397L10 1.64844" stroke="white" stroke-width="1.51198" stroke-linecap="round" stroke-linejoin="round"/></svg>')
-    no-repeat 60% 50%;
+    no-repeat 55% 50%;
 }
 
 .label {

@@ -26,7 +26,11 @@ const FilterForm = ({ toggleShowForm, addFilters, filters }) => {
           <Text variant="h3">Filter</Text>
         </div>
         <div className={styles.title_item_3}>
-          <Button variant="text" onClick={toggleShowForm}>
+          <Button
+            variant="text"
+            onClick={toggleShowForm}
+            className={styles.close_btn}
+          >
             <CloseIcon />
           </Button>
         </div>

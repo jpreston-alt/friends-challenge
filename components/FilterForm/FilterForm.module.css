@@ -47,3 +47,9 @@
 .submit_btn {
   margin-top: var(--spacing_7);
 }
+
+.close_btn {
+  border-radius: var(--border-radius-pill);
+  padding: 0 var(--spacing_2);
+  height: var(--spacing_6);
+}

@@ -1,20 +1,7 @@
 import React from "react";
 import styles from "./NavMenu.module.css";
 import { NavItem } from "@components";
-import { HomeIcon, FriendsIcon } from "@icons";
-
-const links = [
-  {
-    name: "Home",
-    href: "/",
-    icon: HomeIcon,
-  },
-  {
-    name: "Friends",
-    href: "/friends",
-    icon: FriendsIcon,
-  },
-];
+import { links } from "@constants/links";
 
 const NavMenu = () => (
   <div className={styles.container}>

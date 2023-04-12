@@ -1,8 +1,15 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   box-shadow: var(--box-shadow_1);
   background: var(--bg_light);
   padding: 0 var(--spacing_8);
   height: var(--navbar-height);
+}
+
+.mobile_link {
+  color: var(--blue);
+  margin-left: var(--spacing_2);
+  font-size: 0.875rem;
 }
